@@ -7,6 +7,7 @@ Visual, skimmable highlights of research papers. Each paper gets one page with a
 | Date read | Paper | Topic | TL;DR |
 |---|---|---|---|
 <!-- New rows go at the top. Format: | YYYY-MM-DD | [Title](papers/<dir>/) | tags | one line | -->
+| 2026-11-12 | [Harness Engineering: Anatomy, Architecture, and Evolution of Coding Agents](papers/2609.00006-harness-engineering/) | `coding-agents` `architecture` | Source-code study of 11 coding agents. None uses an agent framework or code RAG. Skills now lead MCP. The harness has turned from a tool into a platform. |
 
 ## How each note is structured
 
