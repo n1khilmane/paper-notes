@@ -12,7 +12,48 @@
 | **Read on** | 2026-11-12 |
 | **Verdict** | The best map so far of how production coding agents are actually built. It is descriptive, not a benchmark, and its inventory claims go stale within weeks. |
 
-> Companion page: **[subsystems.md](subsystems.md)** is a deep dive with one diagram and one comparison table per subsystem.
+### Pages in this note
+
+| Page | What's in it |
+|---|---|
+| **README.md** (this page) | TL;DR, the one diagram, 13 observations, platform turn, 90-day diff, minimal harness, 18 recommendations, critique |
+| [subsystems.md](subsystems.md) | §5–12: system overview, then a diagram and tables for each of the 7 subsystems, plus the Claude Code vs Codex pipeline |
+| [patterns.md](patterns.md) | §13.1: all 29 design patterns, how they spread, reference-architecture candidates |
+| [synthesis.md](synthesis.md) | §13–15, §17: the two absences, protocol roles, trade-off axes, platform economics, discussion, threats, future work |
+| [landscape.md](landscape.md) | §2–4, §14.4: definition, related work, 2026 market, corpus pins, the Omnigent meta-harness |
+| [qa.md](qa.md) | Running log of questions and answers as I read |
+
+<details>
+<summary><b>Section coverage map</b>: where each part of the paper lives in these notes</summary>
+
+| Paper section | Covered in |
+|---|---|
+| Abstract, §1 Introduction | README: Layer 1 |
+| §2.1 Definition and genealogy · §2.2 What a harness is not · §2.3 Seven subsystems (Fig. 1, Table 1) · §2.4 Minimal harness | README: Layer 2 · [landscape §1](landscape.md#1-definition-and-genealogy-2) |
+| §3.1–3.6 Related work | [landscape §2](landscape.md#2-related-work-3) |
+| §3.7 The 2026 landscape (Table 2) | [landscape §3](landscape.md#3-the-2026-harness-landscape-37-table-2) |
+| §4 Methodology (Table 3, D1–D7, contrast points) | [landscape §4](landscape.md#4-methodology-and-corpus-4-table-3) · README 4a |
+| §5 System overview (Table 4, Obs. 1) | [subsystems §0](subsystems.md#0-system-overview-5) · README 4b |
+| §6 Agent loop (Table 5) | [subsystems §1](subsystems.md#1-agent-loop-6) |
+| §7 LLM integration, prompts, rhetoric, streaming, API features (Tables 6, 16, 17; Obs. 2–3) | [subsystems §2](subsystems.md#2-llm-integration--prompts-7) |
+| §8 Tools, editing, sandboxing (Tables 7–8; Obs. 4, 6) | [subsystems §3](subsystems.md#3-tools-editing-sandboxing-8) |
+| §9 Memory and context (Obs. 5) | [subsystems §4](subsystems.md#4-memory--context-9) |
+| §10 Safety and permissions | [subsystems §5](subsystems.md#5-safety--permissions-10) |
+| §11 Multi-agent (Table 9, Table 18; Obs. 7) | [subsystems §6](subsystems.md#6-multi-agent-orchestration-11) · [pipeline](subsystems.md#claude-code-vs-codex-the-full-pipeline) |
+| §12 Extensibility (Table 10; Obs. 8) | [subsystems §7](subsystems.md#7-extensibility-12) |
+| §13.1 Pattern catalog (Tables 11–12) | [patterns.md](patterns.md) |
+| §13.2 The two absences (Table 13; Obs. 9–10) | [synthesis §1](synthesis.md#1-the-two-absences-132) |
+| §13.3 Inter-agent protocols (Table 14; Obs. 11) | [synthesis §2](synthesis.md#2-inter-agent-protocols-three-roles-for-acp-133) |
+| §13.4 Trade-off framework | [synthesis §3](synthesis.md#3-the-five-trade-off-axes-134) |
+| §14.1–14.3 Platform turn, merger (Table 15), economics | [synthesis §4](synthesis.md#4-the-platform-turn-14) · README 4c |
+| §14.4 Meta-harness (Omnigent) | [landscape §5](landscape.md#5-the-meta-harness-omnigent-144) |
+| §14.5 Ninety days of evolution (Obs. 12) | README 4d · [synthesis §4](synthesis.md#ninety-days-in-numbers-145) · [patterns](patterns.md#pattern-diffusion-april--july) |
+| §15 Discussion (15.1–15.6) | [synthesis §5](synthesis.md#5-discussion-15) |
+| §16 Recommendations 1–18, Listing 3 (Obs. 13) | README: recommendations, 4e |
+| §17 Conclusion, future work | [synthesis §6](synthesis.md#6-conclusion-17) |
+| Appendix A (Tables 16–18) | [subsystems §2](subsystems.md#table-16-prompt-rhetoric-at-a-glance) · [pipeline](subsystems.md#claude-code-vs-codex-the-full-pipeline) |
+
+</details>
 
 ---
 
